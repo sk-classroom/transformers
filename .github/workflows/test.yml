@@ -28,9 +28,18 @@ jobs:
         command: bash grading-toolkit/grade_notebook.sh tests/test_01.py assignment/assignment.ipynb
         timeout: 10
         max-score: 6
+    - name: Test 2
+      id: test-2
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test 2
+        command: bash grading-toolkit/grade_notebook.sh tests/test_02.py assignment/assignment_02.ipynb
+        timeout: 10
+        max-score: 6
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TEST-1_RESULTS: "${{steps.test-1.outputs.result}}"
+        TEST-2_RESULTS: "${{steps.test-2.outputs.result}}"
       with:
-        runners: test-1
+        runners: test-1, test-2
