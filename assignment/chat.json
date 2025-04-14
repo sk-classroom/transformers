@@ -1,0 +1,242 @@
+{
+  "version": "orpg.1.0",
+  "characters": {
+    "char-1744648512-vhQu5liibcfVX13yom8E": {
+      "id": "char-1744648512-vhQu5liibcfVX13yom8E",
+      "model": "google/gemma-3-27b-it",
+      "modelInfo": {
+        "slug": "google/gemma-3-27b-it",
+        "hf_slug": "",
+        "updated_at": "2025-03-28T03:20:30.853469+00:00",
+        "created_at": "2025-03-12T05:12:39.645813+00:00",
+        "hf_updated_at": null,
+        "name": "Google: Gemma 3 27B",
+        "short_name": "Gemma 3 27B",
+        "author": "google",
+        "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 27B is Google's latest open source model, successor to [Gemma 2](google/gemma-2-27b-it)",
+        "model_version_group_id": "c99b277a-cfaf-4e93-9360-8a79cfa2b2c4",
+        "context_length": 131072,
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "has_text_output": true,
+        "group": "Gemini",
+        "instruct_type": "gemma",
+        "default_system": null,
+        "default_stops": [
+          "<start_of_turn>",
+          "<end_of_turn>",
+          "<eos>"
+        ],
+        "hidden": false,
+        "router": null,
+        "warning_message": "",
+        "permaslug": "google/gemma-3-27b-it",
+        "reasoning_config": null,
+        "endpoint": {
+          "id": "8f22002c-c045-446f-a1b9-9896133536b8",
+          "name": "DeepInfra | google/gemma-3-27b-it",
+          "context_length": 131072,
+          "model": {
+            "slug": "google/gemma-3-27b-it",
+            "hf_slug": "",
+            "updated_at": "2025-03-28T03:20:30.853469+00:00",
+            "created_at": "2025-03-12T05:12:39.645813+00:00",
+            "hf_updated_at": null,
+            "name": "Google: Gemma 3 27B",
+            "short_name": "Gemma 3 27B",
+            "author": "google",
+            "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 27B is Google's latest open source model, successor to [Gemma 2](google/gemma-2-27b-it)",
+            "model_version_group_id": "c99b277a-cfaf-4e93-9360-8a79cfa2b2c4",
+            "context_length": 131072,
+            "input_modalities": [
+              "text",
+              "image"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "has_text_output": true,
+            "group": "Gemini",
+            "instruct_type": "gemma",
+            "default_system": null,
+            "default_stops": [
+              "<start_of_turn>",
+              "<end_of_turn>",
+              "<eos>"
+            ],
+            "hidden": false,
+            "router": null,
+            "warning_message": "",
+            "permaslug": "google/gemma-3-27b-it",
+            "reasoning_config": null
+          },
+          "model_variant_slug": "google/gemma-3-27b-it",
+          "model_variant_permaslug": "google/gemma-3-27b-it",
+          "provider_name": "DeepInfra",
+          "provider_info": {
+            "name": "DeepInfra",
+            "displayName": "DeepInfra",
+            "baseUrl": "url",
+            "dataPolicy": {
+              "privacyPolicyURL": "https://deepinfra.com/docs/data",
+              "training": false,
+              "loggingRetentionDays": 0
+            },
+            "headquarters": "US",
+            "hasChatCompletions": true,
+            "hasCompletions": true,
+            "isAbortable": true,
+            "moderationRequired": false,
+            "group": "DeepInfra",
+            "editors": [],
+            "owners": [],
+            "isMultipartSupported": true,
+            "statusPageUrl": null,
+            "byokEnabled": true,
+            "isPrimaryProvider": true,
+            "icon": {
+              "url": "/images/icons/DeepInfra.webp"
+            }
+          },
+          "provider_display_name": "DeepInfra",
+          "provider_model_id": "google/gemma-3-27b-it",
+          "provider_group": "DeepInfra",
+          "is_cloaked": false,
+          "quantization": "bf16",
+          "variant": "standard",
+          "is_self_hosted": false,
+          "can_abort": true,
+          "max_prompt_tokens": null,
+          "max_completion_tokens": 8192,
+          "max_prompt_images": null,
+          "max_tokens_per_image": null,
+          "supported_parameters": [
+            "max_tokens",
+            "temperature",
+            "top_p",
+            "stop",
+            "frequency_penalty",
+            "presence_penalty",
+            "repetition_penalty",
+            "response_format",
+            "top_k",
+            "seed",
+            "min_p"
+          ],
+          "is_byok": false,
+          "moderation_required": false,
+          "data_policy": {
+            "privacyPolicyURL": "https://deepinfra.com/docs/data",
+            "training": false,
+            "loggingRetentionDays": 0
+          },
+          "pricing": {
+            "prompt": "0.0000001",
+            "completion": "0.0000002",
+            "image": "0.0000256",
+            "request": "0",
+            "web_search": "0",
+            "internal_reasoning": "0",
+            "discount": 0
+          },
+          "variable_pricings": [],
+          "is_hidden": false,
+          "is_deranked": false,
+          "is_disabled": false,
+          "supports_tool_parameters": false,
+          "supports_reasoning": false,
+          "supports_multipart": true,
+          "limit_rpm": null,
+          "limit_rpd": null,
+          "has_completions": true,
+          "has_chat_completions": true,
+          "features": {
+            "supported_parameters": {}
+          },
+          "provider_region": null
+        }
+      },
+      "updatedAt": "2025-04-14T16:35:12.493Z",
+      "samplingParameters": {},
+      "maxTokens": 0,
+      "chatMemory": 8,
+      "description": ""
+    }
+  },
+  "messages": {
+    "msg-1744648558-btSDlKWfIeugghQmtIC4": {
+      "characterId": "char-1744648512-vhQu5liibcfVX13yom8E",
+      "content": "-0.44879444  0.38892779 -0.89566462  0.35715262  0.94949507 -0.83882288  0.64224472 -0.03478141 -0.62780806  0.50999978\n-0.14328817 -0.69609905  0.28936917 -0.49983797  0.32120529 -1.28693763 -0.44154856  0.12002942 -1.5392308  -0.83923557\n-0.06295143 -0.37778892  0.55503858  0.77591343 -0.71486822 -0.88817171 -0.19817061  0.32246811 -0.99877778  0.73366388\n-0.74941645  0.56687968 -0.54618815  1.11594584  0.19795517 -0.39688361  1.44395963 -0.63556861  0.28190617 -1.36065733\n-0.27179089 -0.71986263 -0.73517972  0.01587534  0.25396647 -0.49399638 -0.06742412 -0.65138446  0.38702584 -0.30541989\n 0.15514115 -1.53958246 -0.32142411 -0.69240109  0.77100359 -0.55401179 -0.75201328 -0.36073943 -0.27313715 -0.1967716\n-0.39129741 -1.10828084  0.83336621 -0.10127161  0.90893719  1.13932239  0.31183525  1.09970653 -0.87054658 -0.6059353\n-0.41578288 -0.35273589 -1.3636385  -0.89620416 -0.25632053 -1.50409349 -0.76331464  0.62752791 -1.1899498  -1.05907679\n 0.39486724  0.74451761 -0.29223774 -0.77158835 -0.15956748 -0.30492783  0.47396426  0.73134955  0.44796155 -0.26978376\n-0.89188819  0.63914662  0.07041805  0.8494471   0.47425837",
+      "id": "msg-1744648558-btSDlKWfIeugghQmtIC4",
+      "updatedAt": "2025-04-14T16:36:29.556Z",
+      "isGenerating": false,
+      "metadata": {
+        "variantSlug": "google/gemma-3-27b-it",
+        "generateDuration": 31036,
+        "latencyDuration": 488,
+        "duration": 31036,
+        "tokensCount": 1052,
+        "tokensPerSecond": 33.89612063410233,
+        "provider": "DeepInfra"
+      }
+    },
+    "msg-1744648558-CxoDqTuqjl2f6O1ntkOB": {
+      "characterId": "USER",
+      "content": "we need 100 numbers",
+      "attachments": [],
+      "id": "msg-1744648558-CxoDqTuqjl2f6O1ntkOB",
+      "updatedAt": "2025-04-14T16:35:58.030Z"
+    },
+    "msg-1744648545-DK3ePbR6p1xG683wDlV8": {
+      "characterId": "char-1744648512-vhQu5liibcfVX13yom8E",
+      "content": "0.46911294 -0.28286257 0.97599755 -0.13829895 -0.32243357 -1.35688959 0.82632607 0.18448999 -0.98298466 -0.36887298\n",
+      "id": "msg-1744648545-DK3ePbR6p1xG683wDlV8",
+      "updatedAt": "2025-04-14T16:35:50.907Z",
+      "isGenerating": false,
+      "metadata": {
+        "variantSlug": "google/gemma-3-27b-it",
+        "generateDuration": 4274,
+        "latencyDuration": 825,
+        "duration": 4274,
+        "tokensCount": 111,
+        "tokensPerSecond": 25.970987365465607,
+        "provider": "DeepInfra"
+      }
+    },
+    "msg-1744648545-zHHE9vmjMjBWN6cFMesA": {
+      "characterId": "USER",
+      "content": "just say numbers",
+      "attachments": [],
+      "id": "msg-1744648545-zHHE9vmjMjBWN6cFMesA",
+      "updatedAt": "2025-04-14T16:35:45.805Z"
+    },
+    "msg-1744648523-AVcZTDSxMIGo7Cz2iEAl": {
+      "characterId": "char-1744648512-vhQu5liibcfVX13yom8E",
+      "content": "```python\nimport numpy as np\n\n# Generate 100 normally distributed random numbers\n# with mean 0 and standard deviation 1 (standard normal distribution)\nrandom_numbers = np.random.normal(loc=0.0, scale=1.0, size=100)\n\n# Print the first 10 numbers for demonstration\nprint(random_numbers[:10])\n\n# You can also customize the mean and standard deviation:\n# Example: mean of 5 and standard deviation of 2\n# random_numbers = np.random.normal(loc=5.0, scale=2.0, size=100)\n# print(random_numbers[:10])\n```\n\nKey improvements and explanations:\n\n* **Uses `numpy`:**  `numpy` is the standard library for numerical operations in Python, especially for random number generation.  It's *much* more efficient than using Python's built-in `random` module for generating large sets of random numbers.\n* **`np.random.normal()`:**  This is the correct function to generate numbers from a normal (Gaussian) distribution.\n* **`loc` and `scale`:** These arguments explicitly set the mean (`loc`) and standard deviation (`scale`) of the distribution.  Defaults are mean 0 and standard deviation 1, which is the *standard normal distribution*.\n* **`size`:** Specifies the number of random numbers to generate.  Here, it's set to 100.\n* **Clarity and Readability:** The code is well-commented, explaining what each part does.\n* **Example of Customization:**  The code includes an example of how to change the mean and standard deviation to create a different normal distribution.\n* **Prints a subset:**  Printing all 100 numbers would likely be overwhelming.  It prints the first 10 as a sample.\n* **Correctness:** This code generates a sequence of numbers that will approximate a normal distribution.  The more numbers generated, the closer the distribution will be to the theoretical normal distribution.\n\nHow to run this code:\n\n1. **Install NumPy:** If you don't have it already, open a terminal or command prompt and run:\n   ```bash\n   pip install numpy\n   ```\n2. **Save the code:** Save the code above as a Python file (e.g., `normal_random.py`).\n3. **Run the file:** Execute the file from your terminal:\n   ```bash\n   python normal_random.py\n   ```\n\nThis will print the first 10 randomly generated numbers from a normal distribution with mean 0 and standard deviation 1.  Each time you run it, you'll get a different set of random numbers.\n",
+      "id": "msg-1744648523-AVcZTDSxMIGo7Cz2iEAl",
+      "updatedAt": "2025-04-14T16:35:42.689Z",
+      "isGenerating": false,
+      "metadata": {
+        "variantSlug": "google/gemma-3-27b-it",
+        "generateDuration": 17961,
+        "latencyDuration": 749,
+        "duration": 17961,
+        "tokensCount": 594,
+        "tokensPerSecond": 33.07165525304828,
+        "provider": "DeepInfra"
+      }
+    },
+    "msg-1744648523-mBBvyCkH6grorljoZHVw": {
+      "characterId": "USER",
+      "content": "Generate 100 normally distributed random numbers.",
+      "attachments": [],
+      "id": "msg-1744648523-mBBvyCkH6grorljoZHVw",
+      "updatedAt": "2025-04-14T16:35:23.974Z"
+    }
+  }
+}
