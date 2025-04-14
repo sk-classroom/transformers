@@ -21,6 +21,8 @@ jobs:
         setup-command: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
           export PATH="$HOME/.cargo/bin:$PATH"
+          uv venv
+          source .venv/bin/activate
           . $HOME/.cargo/env
           uv pip install -r requirements.txt
         command: bash grading-toolkit/grade_notebook.sh tests/test_01.py assignment/assignment.ipynb
