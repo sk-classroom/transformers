@@ -9,6 +9,19 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 import torch
 from transformers import AutoTokenizer, AutoModel
 
+
+# Load the tokenizer and model
+tokenizer = AutoTokenizer.from_pretrained(
+    "bert-base-uncased"
+)
+
+    # Load the model
+model = AutoModel.from_pretrained(
+    "bert-base-uncased"
+)
+
+# Set the model to evaluation mode
+model = model.eval()
 def load_data(focal_word, is_train, n_samples=100):
     data_type = "train" if is_train else "test"
     data_file = f"https://raw.githubusercontent.com/danlou/bert-disambiguation/master/data/CoarseWSD-20/{focal_word}/{data_type}.data.txt"
@@ -77,10 +90,10 @@ train_data = load_data(focal_word, is_train=True)
 test_data = load_data(focal_word, is_train=False)
 
 # Get the embeddings of the test set
-emb_train = get_token_embedding(train_data["sentence"].values, train_data["word_pos"].values)
+emb_train = get_token_embedding(train_data["sentence"].values, train_data["word_pos"].values, model, tokenizer)
 
 # Get the embeddings of the test set
-emb_test = get_token_embedding(test_data["sentence"].values, test_data["word_pos"].values)
+emb_test = get_token_embedding(test_data["sentence"].values, test_data["word_pos"].values, model, tokenizer)
 
 # Train the classifier
 clf = train_classifier(emb_train, train_data["label"].values)
