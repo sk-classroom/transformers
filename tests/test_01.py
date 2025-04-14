@@ -20,7 +20,7 @@ model = AutoModel.from_pretrained(
 
 # Set the model to evaluation mode
 model = model.eval()
-def load_data(focal_word, is_train, n_samples=100):
+def load_data(focal_word, is_train, n_samples=100, random_state=42):
     data_type = "train" if is_train else "test"
     data_file = f"https://raw.githubusercontent.com/danlou/bert-disambiguation/master/data/CoarseWSD-20/{focal_word}/{data_type}.data.txt"
     label_file = f"https://raw.githubusercontent.com/danlou/bert-disambiguation/master/data/CoarseWSD-20/{focal_word}/{data_type}.gold.txt"
@@ -40,7 +40,7 @@ def load_data(focal_word, is_train, n_samples=100):
         names=["label"],
     )
     combined_table = pd.concat([data_table, label_table], axis=1)
-    return combined_table.sample(n_samples)
+    return combined_table.sample(n_samples, random_state=random_state)
 
 def train_classifier(emb, labels):
     """
@@ -103,4 +103,4 @@ prediction = clf.predict(emb_test)
 accuracy = evaluate_classifier(clf, emb_test, test_data["label"].values)
 
 
-assert accuracy > 0.91
+assert accuracy > 0.91, f"Accuracy is {accuracy}, which is not greater than 0.91"
