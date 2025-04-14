@@ -11,3 +11,4 @@ nbconvert
 jupytext
 torch
 transformers
+hf_xet
