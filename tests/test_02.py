@@ -13,28 +13,20 @@ def validate_json(json_file_path):
     Args:
         json_file_path: Path to the JSON file to validate
     """
-    try:
-        # Read and parse the JSON file
-        with open(json_file_path, 'r') as f:
-            data = json.load(f)
+    # Read and parse the JSON file
+    with open(json_file_path, 'r') as f:
+        data = json.load(f)
 
-        # Check if the JSON structure is valid
-        print("✅ JSON is valid")
+    # Check if the JSON structure is valid
+    print("✅ JSON is valid")
 
-        # Check if model is gemma 27B
-        model_check = check_model(data)
+    # Check if model is gemma 27B
+    model_check = check_model(data)
 
-        # Check if the last message has 100+ normally distributed numbers
-        numbers_check = check_last_message_numbers(data)
+    # Check if the last message has 100+ normally distributed numbers
+    numbers_check = check_last_message_numbers(data)
 
-        return model_check and numbers_check
-
-    except json.JSONDecodeError:
-        print("❌ Invalid JSON format")
-        return False
-    except Exception as e:
-        print(f"❌ Error: {str(e)}")
-        return False
+    return model_check and numbers_check
 
 def check_model(data):
     """Check if the model is gemma 27B"""
