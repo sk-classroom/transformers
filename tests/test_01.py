@@ -87,11 +87,12 @@ focal_word = "java"
 train_data = load_data(focal_word, is_train=True)
 test_data = load_data(focal_word, is_train=False)
 
-# Get the embeddings of the test set
-emb_train = get_token_embedding(train_data["sentence"].values.tolist(), train_data["word_pos"].values, model, tokenizer)
+with torch.no_grad():
+    # Get the embeddings of the test set
+    emb_train = get_token_embedding(train_data["sentence"].values.tolist(), train_data["word_pos"].values, model, tokenizer)
 
-# Get the embeddings of the test set
-emb_test = get_token_embedding(test_data["sentence"].values.tolist(), test_data["word_pos"].values, model, tokenizer)
+    # Get the embeddings of the test set
+    emb_test = get_token_embedding(test_data["sentence"].values.tolist(), test_data["word_pos"].values, model, tokenizer)
 
 # Train the classifier
 clf = train_classifier(emb_train, train_data["label"].values)
